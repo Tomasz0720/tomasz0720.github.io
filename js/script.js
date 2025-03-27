@@ -80,3 +80,25 @@
 
 
 })(jQuery);
+
+// Select all <svg> elements with a <use> tag
+document.querySelectorAll('svg').forEach(svg => {
+  const useElement = svg.querySelector('use');
+  
+  // Check if the <use> element has a valid xlink:href
+  if (useElement) {
+    const symbolId = useElement.getAttribute('xlink:href').replace('#', '');
+    const symbol = document.querySelector(`symbol[id="${symbolId}"]`);
+    
+    // Check if the <symbol> has a data-link attribute
+    if (symbol && symbol.hasAttribute('data-link')) {
+      const link = symbol.getAttribute('data-link');
+      
+      // Add a click event listener to the <svg>
+      svg.style.cursor = 'pointer'; // Change cursor to pointer
+      svg.addEventListener('click', () => {
+        window.open(link, '_blank'); // Open the link in a new tab
+      });
+    }
+  }
+});

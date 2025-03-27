@@ -9,7 +9,7 @@
 
 :root {
     --bs-blue: #4BA1A7;
-    --bs-red: #F0756C;
+    --bs-red: #C3C3C3;
     --bs-orange: #F5E9E9;
     --bs-yellow: #EFEAEA;
     --bs-green: #F5F8F1;
@@ -21,21 +21,21 @@
     
     --bs-link-color: #111111;
     --bs-link-color-rgb: 17, 17, 17;
-    --bs-link-hover-color: #F0756C;
+    --bs-link-hover-color: #C3C3C3;
     --bs-link-hover-color-rgb: 240, 117, 108;
     
-    --bs-primary: #F0756C;
+    --bs-primary: #C3C3C3;
     --bs-primary-rgb: 240, 117, 108;
     --bs-body-color: #111111;   
     --bs-info: #C3C3C3; 
     --bs-light-text-emphasis: #c3c3c3;
     
-    --swiper-pagination-color: #F0756C;
+    --swiper-pagination-color: #C3C3C3;
 }
 
 body , body  [data-bs-theme=light] {
     --bs-blue: #4BA1A7;
-    --bs-red: #F0756C;
+    --bs-red: #C3C3C3;
     --bs-orange: #F5E9E9;
     --bs-yellow: #EFEAEA;
     --bs-green: #F5F8F1;
@@ -58,6 +58,38 @@ body , body  [data-bs-theme=light] {
     --bs-btn-active-bg: var(--bs-black); 
 }
 
+.d-flex {
+    display: flex !important; /* Ensure Flexbox is applied */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    justify-content: space-between; /* Add space between items */
+    gap: 1rem; /* Add spacing between containers */
+}
+
+.glassy-container {
+    max-width: 100%; /* Allow the container to take full width of its column */
+    min-height: 250px; /* Ensure a consistent height for all boxes */
+    background: rgba(173, 216, 230, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur effect for the glassy look */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Optional border for better visibility */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 10px; /* Rounded corners */
+    padding: 2rem; /* Add padding inside the container */
+    margin: 0 auto; /* Center the container */
+}
+
+.glassy-container-LKIT {
+    max-width: 90%; /* Adjust the width to make it wider */
+    background: rgba(173, 216, 230, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur effect for the glassy look */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Optional border for better visibility */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 10px; /* Rounded corners */
+    padding: 2rem; /* Add padding inside the container */
+    margin: 0 auto; /* Center the container */
+}
+
 .pagination {
     --bs-pagination-padding-x: 0.75rem;
     --bs-pagination-padding-y: 0.375rem;
@@ -74,7 +106,7 @@ body , body  [data-bs-theme=light] {
     --bs-pagination-focus-bg: var(--bs-secondary-bg);
     --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
     --bs-pagination-active-color: var(--bs-black);
-    --bs-pagination-active-bg: #F5E9E9;
+    --bs-pagination-active-bg: #e9f5f4;
     --bs-pagination-active-border-color: #F5E9E9;
     --bs-pagination-disabled-color: var(--bs-secondary-color);
     --bs-pagination-disabled-bg: var(--bs-secondary-bg);
@@ -89,11 +121,11 @@ body , body  [data-bs-theme=light] {
 }
 
 .bg-yellow {
-    background-color: var(--bs-yellow) !important;
+    background-color: var(#ececec) !important;
 }
 
 .bg-green {
-    background-color: var(--bs-green) !important;
+    background-color: var(#ececec) !important;
 }
 
 .bg-teal {
@@ -209,4 +241,14 @@ p.a {
     transition: max-height 0.5s ease-in-out;
     overflow: hidden;
     max-height: 0; /* Default collapsed state */
+  }
+
+/* Header icons */
+header .icon svg {
+    color: black;
+  }
+  
+  /* Footer icons */
+  footer .social-links svg {
+    color: white;
   }
