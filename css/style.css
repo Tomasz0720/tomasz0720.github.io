@@ -58,6 +58,21 @@ body , body  [data-bs-theme=light] {
     --bs-btn-active-bg: var(--bs-black); 
 }
 
+.custom-btn {
+    background-color: #000000; /* Custom background color */
+    color: #ffffff; /* Text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Adjust padding */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.4s ease; /* Smooth hover effect */
+  }
+  
+  .custom-btn:hover {
+    background-color: #000000; /* Darker shade on hover */
+    color: #ffffff
+  }
+
+
 .d-flex {
     display: flex !important; /* Ensure Flexbox is applied */
     flex-wrap: nowrap; /* Prevent wrapping */
@@ -89,6 +104,13 @@ body , body  [data-bs-theme=light] {
     padding: 2rem; /* Add padding inside the container */
     margin: 0 auto; /* Center the container */
 }
+
+.glassy-container svg {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    overflow: visible;
+  }
 
 .pagination {
     --bs-pagination-padding-x: 0.75rem;
