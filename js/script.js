@@ -100,5 +100,5 @@ document.querySelectorAll('svg').forEach(svg => {
         window.open(link, '_blank'); // Open the link in a new tab
       });
     }
-  }
+  }    
 });
