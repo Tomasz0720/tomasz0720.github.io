@@ -82,6 +82,7 @@ document.querySelectorAll('svg').forEach(svg => {
         window.open(link, '_blank'); // Open the link in a new tab
       });
     }
+<<<<<<< HEAD
   }
 });
 
@@ -154,3 +155,42 @@ function updateSvgColors() {
     }
   });
 }
+=======
+  }    
+});
+
+// Alternative functionality for SVG icon clicks using data-link attributes
+document.addEventListener('DOMContentLoaded', function() {
+  // Find all SVG symbols with data-link attributes
+  const symbols = document.querySelectorAll('symbol[data-link]');
+  
+  // Create a mapping of symbol IDs to their data-link values
+  const linkMap = {};
+  symbols.forEach(symbol => {
+    const id = symbol.getAttribute('id');
+    const link = symbol.getAttribute('data-link');
+    if (id && link) {
+      linkMap[id] = link;
+    }
+  });
+  
+  // Find all <use> elements within SVGs
+  document.querySelectorAll('svg use').forEach(use => {
+    const href = use.getAttribute('xlink:href');
+    if (href) {
+      const id = href.replace('#', '');
+      
+      // If we have a link for this ID, make the parent SVG clickable
+      if (linkMap[id] && !use.closest('a')) {
+        const svg = use.closest('svg');
+        if (svg) {
+          svg.style.cursor = 'pointer';
+          svg.addEventListener('click', function() {
+            window.open(linkMap[id], '_blank');
+          });
+        }
+      }
+    }
+  });
+});
+>>>>>>> c566980373a0c0837fd146d184ac5612b7a3f57d

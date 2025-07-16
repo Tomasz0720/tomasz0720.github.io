@@ -1,0 +1,241 @@
+/* fonts family */
+
+:root {
+    --body-font : "Work Sans", sans-serif;
+    --bs-btn-font-family : "Work Sans", sans-serif;
+}
+
+/* fonts color */
+
+:root {
+    --bs-blue: #4BA1A7;
+    --bs-red: #C3C3C3;
+    --bs-orange: #F5E9E9;
+    --bs-yellow: #EFEAEA;
+    --bs-green: #F5F8F1;
+    --bs-teal: #EFE8EF;
+    --bs-cyan: #F3F3F3;
+    --bs-black: #111111; 
+    --bs-white: #FFFFFF;
+    --bs-gray: #777777; 
+    
+    --bs-link-color: #111111;
+    --bs-link-color-rgb: 17, 17, 17;
+    --bs-link-hover-color: #C3C3C3;
+    --bs-link-hover-color-rgb: 240, 117, 108;
+    
+    --bs-primary: #C3C3C3;
+    --bs-primary-rgb: 240, 117, 108;
+    --bs-body-color: #111111;   
+    --bs-info: #C3C3C3; 
+    --bs-light-text-emphasis: #c3c3c3;
+    
+    --swiper-pagination-color: #C3C3C3;
+}
+
+body , body  [data-bs-theme=light] {
+    --bs-blue: #4BA1A7;
+    --bs-red: #C3C3C3;
+    --bs-orange: #F5E9E9;
+    --bs-yellow: #EFEAEA;
+    --bs-green: #F5F8F1;
+    --bs-teal: #EFE8EF;
+    --bs-cyan: #F3F3F3;
+    --bs-black: #111111; 
+    --bs-white: #FFFFFF;
+    --bs-gray: #777777;   
+    --bs-info: #C3C3C3;
+}
+
+.blockquote {
+    background-color: #ffffff;
+    border-left: none;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+    border-radius: 0.5rem;
+}
+
+.portfolio-quote {
+    margin: 1rem auto;
+    padding: 0;
+}
+
+.portfolio-quote .blockquote {
+    margin: 0;
+}
+
+/* Text colors for dark mode */
+h1, h2, h3, h4, h5, h6, .text-black {
+    color: #2b2b2b !important;
+}
+
+p, .text-black {
+    color: #777777 !important;
+}
+
+/* Banner text colors */
+.banner p.fs-4 {
+    color: #FFFFFF !important;
+}
+
+.banner h1.display-1 {
+    color: #FFFFFF !important;
+}
+
+.blockquote-footer {
+    color: #171717 !important;
+}
+
+.btn-primary {
+    --bs-btn-color: var(--bs-black);
+    --bs-btn-bg: var(--bs-orange);
+    --bs-btn-border-color: var(--bs-orange);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--bs-black);
+    --bs-btn-hover-border-color: var(--bs-black);
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-bg: var(--bs-black); 
+}
+
+.custom-btn {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.4s ease;
+}
+  
+.custom-btn:hover {
+    background-color: #000000;
+    color: #ffffff
+}
+
+.d-flex {
+    display: flex !important;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.glassy-container {
+    max-width: 100%;
+    min-height: 250px;
+    background: rgba(173, 216, 230, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+.glassy-container svg {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    overflow: visible;
+}
+
+.bg-gray {
+    background-color: var(--bs-gray) !important;
+}
+
+.navbar-nav a.nav-link:hover {
+    color: var(--bs-primary) !important;
+}
+
+body {
+    font-family: var(--body-font);
+}
+
+/* Footer text color for light mode */
+footer.bg-black {
+    color: #FFFFFF !important;
+}
+
+footer.bg-black p, 
+footer.bg-black h3, 
+footer.bg-black a, 
+footer.bg-black div {
+    color: #FFFFFF !important;
+}
+
+/* font size */
+h2,h3,h4,h5,h6 {
+    font-weight: 700;
+}
+
+.display-1 {
+    font-size: calc(4.375rem + 4.5vw);
+    font-weight: 900;
+    font-family: var(--body-font); 
+    line-height: 80%;
+}
+
+.display-2,
+.display-3,
+.display-4,
+.display-5 {
+    font-weight: 700;
+}
+
+.p-6 {
+    padding: 4rem !important;
+}
+
+/* navbar */
+.navbar svg {
+    color: #111111;
+}
+
+/* banner color */
+.banner {
+    color: var(--bs-black);
+}
+
+/* line height */
+.lh-small {
+    line-height: 80%;
+}
+
+.ls-4 {
+    letter-spacing: 0.2rem;
+}
+
+/* paragraph color */
+.postf {
+    color: var(--bs-gray);
+}
+
+/* width of container */
+@media (min-width: 1200px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 1460px;
+    }
+}
+
+/* Header icons */
+header .icon svg {
+    color: black;
+}
+  
+/* Footer icons */
+footer .social-links svg {
+    color: white;
+}
+
+/* Add specific styles for the SVG icons */
+.text-primary {
+    color: var(--bs-black) !important;
+}
+
+svg.menu, svg.student, svg.code, svg.laptop {
+    color: var(--bs-black);
+}
+
+/* Style for active SVG icons */
+.navbar-toggler svg.menu {
+    color: var(--bs-primary);
+}
