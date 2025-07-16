@@ -230,47 +230,177 @@ p.a {
     }
 }
 
-/* testimonial */
 
-.testimonial-card {
-  background: var(--bs-black);
-  color: var(--bs-white);
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
 }
 
-.testimonial-card .postd {
-    color: var(--bs-red);
+body.dark-mode .navbar {
+  background-color: #1e1e1e !important;
 }
 
-.page-link {
-    color: var(--bs-black);
+body.dark-mode .navbar-brand,
+body.dark-mode .nav-link {
+  color: #e0e0e0 !important;
 }
 
-.page-link:hover {
-    z-index: 2;
-    color: var(--bs-pagination-hover-color);
-    background-color: var(--bs-pagination-hover-bg);
-    border-color: var(--bs-pagination-hover-border-color);
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode h4, 
+body.dark-mode h5, 
+body.dark-mode h6 {
+  color: #ffffff !important;
 }
 
-.active>.page-link, .page-link.active {
-    z-index: 3;
-    color: var(--bs-pagination-active-color);
-    background-color: var(--bs-pagination-active-bg);
-    border-color: var(--bs-pagination-active-border-color);
+body.dark-mode .glassy-container {
+  background: rgba(30, 30, 30, 0.7) !important;
+  border-color: rgba(80, 80, 80, 0.3) !important;
+  color: #e0e0e0 !important;
 }
 
-.custom-collapse {
-    transition: max-height 0.5s ease-in-out;
-    overflow: hidden;
-    max-height: 0; /* Default collapsed state */
-  }
+body.dark-mode .custom-btn {
+  background-color: #333 !important;
+  color: #ffffff !important;
+}
 
-/* Header icons */
-header .icon svg {
-    color: black;
+body.dark-mode svg:not(#footer svg):not(#theme-icon-light) {
+  fill: #e0e0e0 !important;
+}
+
+body.dark-mode svg:not(#footer svg):not(#theme-icon-light) path {
+  fill: #e0e0e0 !important;
+}
+
+#footer svg,
+#footer .social-links svg {
+  fill: white !important;
+}
+
+/* Light mode (default) */
+.text-primary {
+  color: #111111; /* Default black */
+}
+
+/* Dark mode */
+body.dark-mode .text-primary {
+  color: #e0e0e0 !important; /* Light gray in dark mode */
+}
+
+/* Ensure SVGs are not affected by text-primary */
+.text-primary svg {
+    fill: inherit !important;
   }
   
-  /* Footer icons */
-  footer .social-links svg {
-    color: white;
+  /* Light mode (default) */
+  .menu,
+  .student,
+  .code {
+    fill: #111111 !important; /* Default black */
   }
+  
+  /* Dark mode */
+  body.dark-mode .menu,
+  body.dark-mode .student,
+  body.dark-mode .code {
+    fill: #e0e0e0 !important; /* Light gray in dark mode */
+  }
+
+
+/* Override Bootstrap's text-primary color for SVGs */
+.text-primary svg {
+  fill: #111111 !important;
+  color: #111111 !important;
+}
+
+body.dark-mode .text-primary svg {
+  fill: #e0e0e0 !important;
+  color: #e0e0e0 !important;
+}
+
+/* Fix for the specific SVG icons */
+svg.student, 
+svg.code, 
+svg.menu,
+svg.laptop {
+  fill: #111111 !important;
+}
+
+body.dark-mode svg.student,
+body.dark-mode svg.code,
+body.dark-mode svg.menu,
+body.dark-mode svg.laptop {
+  fill: #e0e0e0 !important;
+}
+
+/* Fix for laptop icon that uses stroke instead of fill */
+svg.laptop path {
+  stroke: #111111 !important;
+}
+
+body.dark-mode svg.laptop path {
+  stroke: #e0e0e0 !important;
+}
+
+/* Styling for the theme toggle button */
+.theme-toggle {
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+#theme-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border: none;
+  background: transparent;
+}
+
+#theme-toggle-btn:hover {
+  opacity: 0.8;
+}
+
+#theme-icon-light {
+  fill: #111111 !important;
+}
+
+#theme-icon-dark {
+  fill: #e0e0e0 !important;
+}
+
+/* CRITICAL FIX FOR SVG COLORS - HIGHEST PRIORITY */
+.text-primary svg.student, 
+.text-primary svg.code, 
+.text-primary svg.menu {
+  fill: #111111 !important;
+  color: #111111 !important;
+}
+
+body.dark-mode .text-primary svg.student,
+body.dark-mode .text-primary svg.code,
+body.dark-mode .text-primary svg.menu {
+  fill: #e0e0e0 !important;
+  color: #e0e0e0 !important;
+}
+
+/* More specific selector for laptop icon */
+.text-primary svg.laptop path {
+  stroke: #111111 !important;
+}
+
+body.dark-mode .text-primary svg.laptop path {
+  stroke: #e0e0e0 !important;
+}
+
+/* Force theme icons to use correct colors */
+#theme-icon-light {
+  fill: #111111 !important;
+}
+
+#theme-icon-dark {
+  fill: #e0e0e0 !important;
+}
