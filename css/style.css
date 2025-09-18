@@ -1,0 +1,406 @@
+/* fonts family */
+
+:root {
+    --body-font : "Work Sans", sans-serif;
+    --bs-btn-font-family : "Work Sans", sans-serif;
+}
+
+/* fonts color */
+
+:root {
+    --bs-blue: #4BA1A7;
+    --bs-red: #C3C3C3;
+    --bs-orange: #F5E9E9;
+    --bs-yellow: #EFEAEA;
+    --bs-green: #F5F8F1;
+    --bs-teal: #EFE8EF;
+    --bs-cyan: #F3F3F3;
+    --bs-black: #111111; 
+    --bs-white: #FFFFFF;
+    --bs-gray: #777777; 
+    
+    --bs-link-color: #111111;
+    --bs-link-color-rgb: 17, 17, 17;
+    --bs-link-hover-color: #C3C3C3;
+    --bs-link-hover-color-rgb: 240, 117, 108;
+    
+    --bs-primary: #C3C3C3;
+    --bs-primary-rgb: 240, 117, 108;
+    --bs-body-color: #111111;   
+    --bs-info: #C3C3C3; 
+    --bs-light-text-emphasis: #c3c3c3;
+    
+    --swiper-pagination-color: #C3C3C3;
+}
+
+body , body  [data-bs-theme=light] {
+    --bs-blue: #4BA1A7;
+    --bs-red: #C3C3C3;
+    --bs-orange: #F5E9E9;
+    --bs-yellow: #EFEAEA;
+    --bs-green: #F5F8F1;
+    --bs-teal: #EFE8EF;
+    --bs-cyan: #F3F3F3;
+    --bs-black: #111111; 
+    --bs-white: #FFFFFF;
+    --bs-gray: #777777;   
+    --bs-info: #C3C3C3;
+}
+
+.btn-primary {
+    --bs-btn-color: var(--bs-black);
+    --bs-btn-bg: var(--bs-orange);
+    --bs-btn-border-color: var(--bs-orange);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--bs-black);
+    --bs-btn-hover-border-color: var(--bs-black);
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-bg: var(--bs-black); 
+}
+
+.custom-btn {
+    background-color: #000000; /* Custom background color */
+    color: #ffffff; /* Text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Adjust padding */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.4s ease; /* Smooth hover effect */
+  }
+  
+  .custom-btn:hover {
+    background-color: #000000; /* Darker shade on hover */
+    color: #ffffff
+  }
+
+
+.d-flex {
+    display: flex !important; /* Ensure Flexbox is applied */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    justify-content: space-between; /* Add space between items */
+    gap: 1rem; /* Add spacing between containers */
+}
+
+.glassy-container {
+    max-width: 100%; /* Allow the container to take full width of its column */
+    min-height: 250px; /* Ensure a consistent height for all boxes */
+    background: rgba(173, 216, 230, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur effect for the glassy look */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Optional border for better visibility */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 10px; /* Rounded corners */
+    padding: 2rem; /* Add padding inside the container */
+    margin: 0 auto; /* Center the container */
+}
+
+.glassy-container-LKIT {
+    max-width: 90%; /* Adjust the width to make it wider */
+    background: rgba(173, 216, 230, 0.2); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur effect for the glassy look */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Optional border for better visibility */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 10px; /* Rounded corners */
+    padding: 2rem; /* Add padding inside the container */
+    margin: 0 auto; /* Center the container */
+}
+
+.glassy-container svg {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+
+.pagination {
+    --bs-pagination-padding-x: 0.75rem;
+    --bs-pagination-padding-y: 0.375rem;
+    --bs-pagination-font-size: 1rem;
+    --bs-pagination-color: var(--bs-link-color);
+    --bs-pagination-bg: var(--bs-body-bg);
+    --bs-pagination-border-width: var(--bs-border-width);
+    --bs-pagination-border-color: var(--bs-border-color);
+    --bs-pagination-border-radius: var(--bs-border-radius);
+    --bs-pagination-hover-color: var(--bs-link-hover-color);
+    --bs-pagination-hover-bg: var(--bs-black);
+    --bs-pagination-hover-border-color: var(--bs-border-color);
+    --bs-pagination-focus-color: var(--bs-link-hover-color);
+    --bs-pagination-focus-bg: var(--bs-secondary-bg);
+    --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    --bs-pagination-active-color: var(--bs-black);
+    --bs-pagination-active-bg: #e9f5f4;
+    --bs-pagination-active-border-color: #F5E9E9;
+    --bs-pagination-disabled-color: var(--bs-secondary-color);
+    --bs-pagination-disabled-bg: var(--bs-secondary-bg);
+    --bs-pagination-disabled-border-color: var(--bs-border-color);
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+}
+
+.bg-gray {
+    background-color: var(--bs-gray) !important;
+}
+
+.bg-yellow {
+    background-color: var(#ececec) !important;
+}
+
+.bg-green {
+    background-color: var(#ececec) !important;
+}
+
+.bg-teal {
+    background-color: var(--bs-teal) !important;
+}
+
+.navbar-nav a.nav-link:hover {
+    color: var(--bs-primary) !important;
+}
+
+body {
+    font-family: var(--body-font);
+}
+
+/* font size */
+h2,h3,h4,h5,h6 {
+    font-weight: 700;
+}
+.display-1 {
+    font-size: calc(4.375rem + 4.5vw);
+    font-weight: 900 ;
+    font-family: var(--body-font); 
+    line-height: 80%;
+}
+.display-2,
+.display-3,
+.display-4,
+.display-5 {
+    font-weight: 700 ;
+}
+.p-6 {
+    padding: 4rem !important;
+}
+
+/* navbar */
+.navbar svg {
+    color: #111111;
+}
+
+/* banner color */
+
+.banner {
+    color: var(--bs-black);
+}
+
+/* line height */
+
+p.a {
+    line-height: 10%;
+}
+
+.lh-small {
+    line-height: 80%;
+}
+
+.ls-4 {
+    letter-spacing: 0.2rem;
+}
+
+/* masonry */
+.btn.is-checked {
+    color: var(--bs-btn-hover-color);
+    background-color: var(--bs-btn-hover-bg);
+    border-color: var(--bs-btn-hover-border-color);
+}
+/* paragraph color */
+.postf {
+    color: var(--bs-gray);
+}
+
+.postg {
+    color: var(--bs-info);
+}
+
+/* width of container */
+
+@media (min-width: 1200px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 1460px;
+    }
+}
+
+
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .navbar {
+  background-color: #1e1e1e !important;
+}
+
+body.dark-mode .navbar-brand,
+body.dark-mode .nav-link {
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode h4, 
+body.dark-mode h5, 
+body.dark-mode h6 {
+  color: #ffffff !important;
+}
+
+body.dark-mode .glassy-container {
+  background: rgba(30, 30, 30, 0.7) !important;
+  border-color: rgba(80, 80, 80, 0.3) !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode .custom-btn {
+  background-color: #333 !important;
+  color: #ffffff !important;
+}
+
+body.dark-mode svg:not(#footer svg):not(#theme-icon-light) {
+  fill: #e0e0e0 !important;
+}
+
+body.dark-mode svg:not(#footer svg):not(#theme-icon-light) path {
+  fill: #e0e0e0 !important;
+}
+
+#footer svg,
+#footer .social-links svg {
+  fill: white !important;
+}
+
+/* Light mode (default) */
+.text-primary {
+  color: #111111; /* Default black */
+}
+
+/* Dark mode */
+body.dark-mode .text-primary {
+  color: #e0e0e0 !important; /* Light gray in dark mode */
+}
+
+/* Ensure SVGs are not affected by text-primary */
+.text-primary svg {
+    fill: inherit !important;
+  }
+  
+  /* Light mode (default) */
+  .menu,
+  .student,
+  .code {
+    fill: #111111 !important; /* Default black */
+  }
+  
+  /* Dark mode */
+  body.dark-mode .menu,
+  body.dark-mode .student,
+  body.dark-mode .code {
+    fill: #e0e0e0 !important; /* Light gray in dark mode */
+  }
+
+
+/* Override Bootstrap's text-primary color for SVGs */
+.text-primary svg {
+  fill: #111111 !important;
+  color: #111111 !important;
+}
+
+body.dark-mode .text-primary svg {
+  fill: #e0e0e0 !important;
+  color: #e0e0e0 !important;
+}
+
+/* Fix for the specific SVG icons */
+svg.student, 
+svg.code, 
+svg.menu,
+svg.laptop {
+  fill: #111111 !important;
+}
+
+body.dark-mode svg.student,
+body.dark-mode svg.code,
+body.dark-mode svg.menu,
+body.dark-mode svg.laptop {
+  fill: #e0e0e0 !important;
+}
+
+/* Fix for laptop icon that uses stroke instead of fill */
+svg.laptop path {
+  stroke: #111111 !important;
+}
+
+body.dark-mode svg.laptop path {
+  stroke: #e0e0e0 !important;
+}
+
+/* Styling for the theme toggle button */
+.theme-toggle {
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+#theme-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border: none;
+  background: transparent;
+}
+
+#theme-toggle-btn:hover {
+  opacity: 0.8;
+}
+
+#theme-icon-light {
+  fill: #111111 !important;
+}
+
+#theme-icon-dark {
+  fill: #e0e0e0 !important;
+}
+
+/* CRITICAL FIX FOR SVG COLORS - HIGHEST PRIORITY */
+.text-primary svg.student, 
+.text-primary svg.code, 
+.text-primary svg.menu {
+  fill: #111111 !important;
+  color: #111111 !important;
+}
+
+body.dark-mode .text-primary svg.student,
+body.dark-mode .text-primary svg.code,
+body.dark-mode .text-primary svg.menu {
+  fill: #e0e0e0 !important;
+  color: #e0e0e0 !important;
+}
+
+/* More specific selector for laptop icon */
+.text-primary svg.laptop path {
+  stroke: #111111 !important;
+}
+
+body.dark-mode .text-primary svg.laptop path {
+  stroke: #e0e0e0 !important;
+}
+
+/* Force theme icons to use correct colors */
+#theme-icon-light {
+  fill: #111111 !important;
+}
+
+#theme-icon-dark {
+  fill: #e0e0e0 !important;
+}

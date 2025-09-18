@@ -1,24 +1,18 @@
 (function($) {
-
     "use strict";
 
     $(document).ready(function() {
-      
-      // masonoary //
-
+      // masonoary
       initIsotope();
 
       // lightbox
-
       lightbox.option({
         'resizeDuration': 200,
         'wrapAround': true,
         'fitImagesInViewport': true
-      })
+      });
       
       /* swiper */
-      
-
       var testimonialSwiper = new Swiper(".testimonial-swiper", {
         spaceBetween: 20,
         pagination: {
@@ -37,23 +31,17 @@
           }
         },
       });
+    }); 
 
-    }); // End of a document ready
-
-  // init Isotope
-  var initIsotope = function() {
-    
-    $('.grid').each(function(){
-
-      // $('.grid').imagesLoaded( function() {
-        // images have loaded
+    // init Isotope
+    var initIsotope = function() {
+      $('.grid').each(function(){
         var $buttonGroup = $( '.button-group' );
         var $checked = $buttonGroup.find('.is-checked');
         var filterValue = $checked.attr('data-filter');
-  
+    
         var $grid = $('.grid').isotope({
           itemSelector: '.portfolio-item',
-          // layoutMode: 'fitRows',
           filter: filterValue
         });
     
@@ -71,17 +59,11 @@
             $( this ).addClass('is-checked');
           });
         });
-      // });
-
-    });
-  }
-
-
-
-
+      });
+    };
 })(jQuery);
 
-// Select all <svg> elements with a <use> tag
+// Make SVGs with data-link clickable
 document.querySelectorAll('svg').forEach(svg => {
   const useElement = svg.querySelector('use');
   
@@ -100,6 +82,80 @@ document.querySelectorAll('svg').forEach(svg => {
         window.open(link, '_blank'); // Open the link in a new tab
       });
     }
+<<<<<<< HEAD
+  }
+});
+
+// Dark mode toggle functionality
+document.addEventListener('DOMContentLoaded', function () {
+  console.log("DOM loaded and theme toggle handler initialized");
+  
+  const themeToggleBtn = document.getElementById('theme-toggle-btn');
+  const themeIconLight = document.getElementById('theme-icon-light');
+  const themeIconDark = document.getElementById('theme-icon-dark');
+
+  if (!themeToggleBtn) {
+    console.error("Theme toggle button not found!");
+    return;
+  }
+
+  console.log("Theme toggle button found:", themeToggleBtn);
+  
+  // Check for saved theme preference or use system preference
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.body.classList.add('dark-mode');
+    if (themeIconLight && themeIconDark) {
+      themeIconLight.classList.add('d-none');
+      themeIconDark.classList.remove('d-none');
+    }
+    console.log("Applied dark theme from saved preference");
+  }
+  
+  // Force SVG colors to update based on theme
+  updateSvgColors();
+  
+  // Toggle theme on button click
+  themeToggleBtn.addEventListener('click', function () {
+    console.log("Theme toggle button clicked");
+    document.body.classList.toggle('dark-mode');
+    
+    // Toggle icons
+    if (themeIconLight && themeIconDark) {
+      themeIconLight.classList.toggle('d-none');
+      themeIconDark.classList.toggle('d-none');
+      console.log("Theme icons toggled");
+    }
+    
+    // Save preference
+    if (document.body.classList.contains('dark-mode')) {
+      localStorage.setItem('theme', 'dark');
+      console.log("Saved dark theme preference");
+    } else {
+      localStorage.setItem('theme', 'light');
+      console.log("Saved light theme preference");
+    }
+    
+    // Force SVG colors to update
+    updateSvgColors();
+  });
+});
+
+// Add the missing updateSvgColors function
+function updateSvgColors() {
+  const isDarkMode = document.body.classList.contains('dark-mode');
+  console.log("Updating SVG colors for", isDarkMode ? "dark" : "light", "mode");
+  
+  // Force update all SVGs
+  document.querySelectorAll('.text-primary svg, .student, .code, .menu').forEach(svg => {
+    if (isDarkMode) {
+      svg.style.fill = '#e0e0e0';
+    } else {
+      svg.style.fill = '#111111';
+    }
+  });
+}
+=======
   }    
 });
 
@@ -137,3 +193,4 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+>>>>>>> c566980373a0c0837fd146d184ac5612b7a3f57d
