@@ -267,14 +267,6 @@ body.dark-mode .custom-btn {
   color: #ffffff !important;
 }
 
-body.dark-mode svg:not(#footer svg):not(#theme-icon-light) {
-  fill: #e0e0e0 !important;
-}
-
-body.dark-mode svg:not(#footer svg):not(#theme-icon-light) path {
-  fill: #e0e0e0 !important;
-}
-
 #footer svg,
 #footer .social-links svg {
   fill: white !important;
